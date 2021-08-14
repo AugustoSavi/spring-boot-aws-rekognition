@@ -9,6 +9,10 @@ import lombok.Setter;
 @Setter
 public class Imagem {
 
-    private final String registroId;
-    private final String imageName;
+    private final String id;
+    private final String bucketName;
+    private final String url;
+    private final String keyFile;
+    private final String status;
+
 }

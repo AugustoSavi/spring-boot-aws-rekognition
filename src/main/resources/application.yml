@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: local
+aws:
+  access_key_id: AKIAY5WLL3UZ23JT7MZ4
+  secret_access_key: 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
+  host:
+  s3:
+    bucket: binnoroteirizacao
+    region: us-east-1
