@@ -15,3 +15,35 @@ curl --request POST \
   --form key=image \
   --form image=@/home/user/Downloads/image.jpg
 ```
+
+### Return exemple
+
+```json
+{
+  "sdkResponseMetadata": {
+    "requestId": "requestId"
+  },
+  "sdkHttpMetadata": {
+    "httpHeaders": {
+      "Connection": "keep-alive",
+      "Content-Length": "194",
+      "Content-Type": "application/x-amz-json-1.1",
+      "Date": "Fri, 01 Aug 2030 23:37:59 GMT",
+      "x-amzn-RequestId": "x-amzn-RequestId"
+    },
+    "httpStatusCode": 200
+  },
+  "moderationLabels": [
+    {
+      "confidence": 99.9941,
+      "name": "Drug Products",
+      "parentName": "Drugs"
+    },
+    {
+      "confidence": 99.9941,
+      "name": "Drugs",
+      "parentName": ""
+    }
+  ]
+}
+```
