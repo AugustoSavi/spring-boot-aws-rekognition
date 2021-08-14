@@ -2,21 +2,29 @@
 
 ## Getting Started
 
-* Set properties `aws.access-key` and `aws.secret-key` in application.properties or via command line properties (see https://aws.amazon.com/de/blogs/security/wheres-my-secret-access-key/)
-* Start application
-* Call POST `http://localhost:8080/api/images/moderation` with form-data key=image and value=<your image>
+* Set properties in application.yml
+* start application
 
-### Curl Exemple
+## Imagem usado no exemplo
 
+![naoemaconha](https://user-images.githubusercontent.com/32443720/129457710-daadf2f6-f6d1-42ad-aae9-730768d23e4b.jpg)
+
+### You will send the request like this
+> note: only necessary parameter is the "keyFile"
 ```shell
 curl --request POST \
-  --url http://localhost:8080/api/images/moderation \
-  --header 'Content-Type: multipart/form-data; \
-  --form key=image \
-  --form image=@/home/user/Downloads/image.jpg
+  --url http://localhost:8081/api/images/moderation \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "id": "61180f73a4399c56ed2ac677",
+  "bucketName": "imagens",
+  "url": "http://localhost:9444/s3/imagens/naoemaconha.jpg",
+  "keyFile": "naoemaconha.jpg",
+  "status": "PROCESSANDO"
+}'
 ```
 
-### Return exemple
+### and will receive like this
 
 ```json
 {
@@ -47,5 +55,3 @@ curl --request POST \
   ]
 }
 ```
-
-/// imagem exemplo https://binnoroteirizacao.s3.amazonaws.com/b0b5e49c-cb88-4489-a43a-e1c10bdd6327.jpg

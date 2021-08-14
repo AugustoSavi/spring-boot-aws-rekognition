@@ -18,12 +18,15 @@ public class AwsRekognitionConfiguration {
     @Value("${aws.secret_access_key}")
     private String secretKey;
 
+    @Value("${aws.s3.region}")
+    private String region;
+
     @Bean
     public AmazonRekognition amazonRekognition() {
         BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
         return AmazonRekognitionClientBuilder
                 .standard()
-                .withRegion(Regions.EU_WEST_1)
+                .withRegion(region)
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .build();
     }
