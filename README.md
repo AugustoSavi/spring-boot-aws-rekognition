@@ -4,13 +4,13 @@
 
 * Set properties `aws.access-key` and `aws.secret-key` in application.properties or via command line properties (see https://aws.amazon.com/de/blogs/security/wheres-my-secret-access-key/)
 * Start application
-* Call POST `http://localhost:8080/api/images/moderation-labels` with form-data key=image and value=<your image>
+* Call POST `http://localhost:8080/api/images/moderation` with form-data key=image and value=<your image>
 
 ### Curl Exemple
 
 ```shell
 curl --request POST \
-  --url http://localhost:8080/api/images/moderation-labels \
+  --url http://localhost:8080/api/images/moderation \
   --header 'Content-Type: multipart/form-data; \
   --form key=image \
   --form image=@/home/user/Downloads/image.jpg
@@ -47,3 +47,5 @@ curl --request POST \
   ]
 }
 ```
+
+/// imagem exemplo https://binnoroteirizacao.s3.amazonaws.com/b0b5e49c-cb88-4489-a43a-e1c10bdd6327.jpg

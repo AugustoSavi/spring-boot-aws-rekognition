@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: local
+aws:
+  access_key_id: <key>
+  secret_access_key: <key>
+  host: http://localhost:9444/s3
+  s3:
+    bucket: s3-rekognition
+    region: us-east-1

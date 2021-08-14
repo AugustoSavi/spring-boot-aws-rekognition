@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+
+  s3ninja:
+    image: kcomlabs/s3ninja
+    ports:
+      - "9444:9444"
+    container_name: s3-rekognition
