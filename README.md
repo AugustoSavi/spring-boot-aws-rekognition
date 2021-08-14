@@ -1,15 +1,29 @@
 # Spring Boot Application to demonstrate AWS Rekognition
 
-## Getting Started
+## Como Usar?
 
-* Set properties in application.yml
-* start application
+```bash
+# Clone o repositório
+$ git clone https://github.com/AugustoSavi/spring-boot-aws-rekognition.git
+
+# Entre no repositório
+$ cd spring-boot-aws-rekognition
+
+# renomeie o arquivo application-exemple.yml para application.yml
+
+# coloque as informações no application.yml
+
+# execute de docker compose
+$  sudo docker-compose up
+
+# abra um novo terminal e execute
+$ mvn spring-boot:run
+```
 
 ## Imagem usado no exemplo
-
 ![naoemaconha](https://user-images.githubusercontent.com/32443720/129457710-daadf2f6-f6d1-42ad-aae9-730768d23e4b.jpg)
 
-### You will send the request like this
+### Você vai mandar um post assim
 > note: only necessary parameter is the "keyFile"
 ```shell
 curl --request POST \
@@ -24,7 +38,7 @@ curl --request POST \
 }'
 ```
 
-### and will receive like this
+### e vai receber assim
 
 ```json
 {
