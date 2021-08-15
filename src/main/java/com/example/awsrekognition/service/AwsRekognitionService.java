@@ -21,7 +21,10 @@ public class AwsRekognitionService {
     public DetectModerationLabelsResult detectModerationLabels(Imagem image) {
 
         DetectModerationLabelsRequest request = new DetectModerationLabelsRequest()
-                .withImage(new Image().withS3Object(new S3Object().withName(image.getKeyFile()).withBucket(bucket))).withMinConfidence(95F);
+                .withImage(new Image().withS3Object(new S3Object()
+                .withName(image.getKeyFile())
+                .withBucket(bucket)))
+                .withMinConfidence(95F);
 
         return client.detectModerationLabels(request);
     }

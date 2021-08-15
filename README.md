@@ -13,9 +13,6 @@ $ cd spring-boot-aws-rekognition
 
 # coloque as informações no application.yml
 
-# execute de docker compose
-$  sudo docker-compose up
-
 # abra um novo terminal e execute
 $ mvn spring-boot:run
 ```
