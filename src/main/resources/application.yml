@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: ${MQ_HOST}
+    port: 5672
+    username: ${MQ_USER}
+    password: ${MQ_PWD}
+    virtual-host: ${MQ_VIRTUAL_HOST}
+
+aws:
+  access_key_id: ${AWS_KEY}
+  secret_access_key: ${AWS_SECRET}
+  host:
+  s3:
+    bucket: s3-rekognition
+    region: us-east-1
