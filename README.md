@@ -1,5 +1,11 @@
 # Spring Boot Application to demonstrate AWS Rekognition
 
+![](https://img.shields.io/github/issues/AugustoSavi/spring-boot-aws-rekognition?style=for-the-badge)
+![](https://img.shields.io/github/forks/AugustoSavi/spring-boot-aws-rekognition?style=for-the-badge)
+![](https://img.shields.io/github/stars/AugustoSavi/spring-boot-aws-rekognition?style=for-the-badge)
+![](https://img.shields.io/github/license/AugustoSavi/spring-boot-aws-rekognition?style=for-the-badge)
+![](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FAugustoSavi%2Fspring-boot-aws-rekognition?style=for-the-badge)
+
 ## Como Usar?
 
 ```bash
