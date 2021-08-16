@@ -17,8 +17,7 @@ $ git clone https://github.com/AugustoSavi/spring-boot-aws-rekognition.git
 # Entre no repositório
 $ cd spring-boot-aws-rekognition
 
-# renomeie o arquivo application-exemple.yml para application.yml
-
+# renomeie o arquivo application.yml para application.yml
 # coloque as informações no application.yml
 
 # abra um novo terminal e execute
@@ -28,38 +27,25 @@ $ mvn spring-boot:run
 ## Imagem usado no exemplo
 ![naoemaconha](https://user-images.githubusercontent.com/32443720/129457710-daadf2f6-f6d1-42ad-aae9-730768d23e4b.jpg)
 
-### Você vai mandar um post assim
-> note: only necessary parameter is the "keyFile"
-```shell
-curl --request POST \
-  --url http://localhost:8081/api/images/moderation \
-  --header 'Content-Type: application/json' \
-  --data '{
-  "id": "61180f73a4399c56ed2ac677",
-  "bucketName": "imagens",
-  "url": "http://localhost:9444/s3/imagens/naoemaconha.jpg",
-  "keyFile": "naoemaconha.jpg",
-  "status": "PROCESSANDO"
-}'
+## envio
+    Atualmente esse serviço consome a fila de um rabbitmq que tem como modelo de mensagem: 
+```java
+public class ImagemAdicionadaEvent {
+    private String id;
+
+    private String bucketName;
+
+    private String url;
+
+    private String keyFile;
+
+    private StatusProcessamento status;
+}
 ```
 
-### e vai receber assim
-
+### retorno 
 ```json
 {
-  "sdkResponseMetadata": {
-    "requestId": "requestId"
-  },
-  "sdkHttpMetadata": {
-    "httpHeaders": {
-      "Connection": "keep-alive",
-      "Content-Length": "194",
-      "Content-Type": "application/x-amz-json-1.1",
-      "Date": "Fri, 01 Aug 2030 23:37:59 GMT",
-      "x-amzn-RequestId": "x-amzn-RequestId"
-    },
-    "httpStatusCode": 200
-  },
   "moderationLabels": [
     {
       "confidence": 99.9941,
@@ -74,3 +60,7 @@ curl --request POST \
   ]
 }
 ```
+## Desenvolvedores
+
+[<img src="https://avatars.githubusercontent.com/u/32443720?v=4" width=115 > <br> <sub> Augusto Savi </sub>](https://github.com/AugustoSavi) | [<img src="https://avatars.githubusercontent.com/u/26530455?v=4" width=115 > <br> <sub> Jeanluca Fernandes </sub>](https://github.com/Jean1dev/) |  
+| :---: | :---: |

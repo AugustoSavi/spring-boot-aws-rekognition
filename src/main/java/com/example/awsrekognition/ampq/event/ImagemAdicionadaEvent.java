@@ -10,5 +10,11 @@ import lombok.NoArgsConstructor;
 public class ImagemAdicionadaEvent {
     private String id;
 
-    private String imageKey;
+    private String bucketName;
+
+    private String url;
+
+    private String keyFile;
+
+    private StatusProcessamento status;
 }
