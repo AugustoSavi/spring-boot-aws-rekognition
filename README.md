@@ -5,7 +5,9 @@
 ![](https://img.shields.io/github/stars/AugustoSavi/spring-boot-aws-rekognition?style=for-the-badge)
 ![](https://img.shields.io/github/license/AugustoSavi/spring-boot-aws-rekognition?style=for-the-badge)
 ![](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FAugustoSavi%2Fspring-boot-aws-rekognition?style=for-the-badge)
-
+<br/>
+[![CodeQL](https://github.com/AugustoSavi/spring-boot-aws-rekognition/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AugustoSavi/spring-boot-aws-rekognition/actions/workflows/codeql-analysis.yml)
+[![Java CI with Maven](https://github.com/AugustoSavi/spring-boot-aws-rekognition/actions/workflows/maven.yml/badge.svg)](https://github.com/AugustoSavi/spring-boot-aws-rekognition/actions/workflows/maven.yml)
 ## Como Usar?
 
 ```bash
