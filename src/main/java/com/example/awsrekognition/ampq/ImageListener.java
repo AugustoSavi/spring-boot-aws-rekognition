@@ -1,5 +1,6 @@
 package com.example.awsrekognition.ampq;
 
+import com.amazonaws.services.rekognition.model.DetectModerationLabelsResult;
 import com.example.awsrekognition.ampq.event.ImagemAdicionadaEvent;
 import com.example.awsrekognition.service.AwsRekognitionService;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
@@ -15,7 +16,8 @@ public class ImageListener {
     @RabbitListener(queues = "proc_img_q")
     public void onListener(ImagemAdicionadaEvent imagem) {
         try {
-            System.out.println(service.detectModerationLabels(imagem));
+            DetectModerationLabelsResult detectModerationLabelsResult = service.detectModerationLabels(imagem);
+            System.out.println(imagem.imprimir(detectModerationLabelsResult));
         } catch (Exception e) {
             e.printStackTrace();
             throw new AmqpRejectAndDontRequeueException(e);
